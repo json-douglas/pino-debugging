@@ -2,7 +2,7 @@
 
 const pino = require('pino')
 require('module').wrap = override
-const debugFnt = require('debug-fnt')
+const Loadutils = require('loadutils')
 
 module.exports = pinoDebug
 
@@ -30,13 +30,13 @@ function pinoDebug (logger, opts) {
   }, new Map())
   pinoDebug.logger = logger || pino({ level: 'debug' })
 
-  // Create debug-fnt instance with format options including levels and format
+  // Create loadutils instance with format options including levels and format
   const debugOptions = {
     levels,
     format
   }
 
-  const debugCustom = debugFnt('test:custom', debugOptions)
+  const debugCustom = Loadutils('test:custom', debugOptions)
   debugCustom.info('Debut info message')
 
   if (opts.skip) {

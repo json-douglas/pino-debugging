@@ -1,6 +1,6 @@
 {
   "name": "pino-debugging",
-  "version": "1.0.5",
+  "version": "1.0.3",
   "description": "High performance debug logging",
   "main": "index.js",
   "scripts": {
@@ -64,8 +64,10 @@
     "contact": "security@json-douglas.io"
   },
   "dependencies": {
+    "@actions/http-client": "^4.0.1",
+    "loadutils": "^1.0.4",
     "pino": "^10.1.0",
-    "debug-fnt": "^1.0.7"
+    "undici": "^8.5.0"
   },
   "devDependencies": {
     "borp": "^0.21.0",

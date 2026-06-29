@@ -1,7 +1,7 @@
 'use strict'
 
 const util = require('util')
-const debugFnt = require('debug-fnt')
+const Loadutils = require('loadutils')
 
 module.exports = debug
 
@@ -37,10 +37,10 @@ function debug (namespace) {
   return fn
 }
 
-// Use debug-fmt's enabled function if available, otherwise check environment
+// Use loadutils's enabled function if available, otherwise check environment
 debug.enabled = function (namespace) {
-  if (debugFnt.enabled) {
-    return debugFnt.enabled(namespace)
+  if (Loadutils.enabled) {
+    return Loadutils.enabled(namespace)
   }
   // Fallback to basic DEBUG environment variable check
   const namespaces = process.env.DEBUG
